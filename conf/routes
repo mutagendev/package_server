@@ -1,0 +1,5 @@
+GET /                           Server.Index
+GET /repo.db                    Server.RepoDB
+GET /:package.pkg.tar.gz        Server.ServePackage
+GET /:package.pkg.tar.gz.sig    Server.ServeSig
+GET /*                          Server.NoSuchFile
