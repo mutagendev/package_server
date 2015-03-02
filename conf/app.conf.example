@@ -1,0 +1,36 @@
+# Application
+app.name=Package Server
+app.secret=secret
+
+# Server
+http.addr=0.0.0.0
+http.port=9000
+http.ssl=false
+
+# Logging
+log.trace.output = stderr
+log.info.output  = stderr
+log.warn.output  = stderr
+log.error.output = stderr
+
+log.trace.prefix = "TRACE "
+log.info.prefix  = "INFO  "
+log.warn.prefix  = "WARN  "
+log.error.prefix = "ERROR "
+
+module.jobs=github.com/revel/revel/modules/jobs
+module.static=github.com/revel/revel/modules/static
+
+[dev]
+mode.dev=true
+watch=true
+module.testrunner=github.com/revel/revel/modules/testrunner
+
+[prod]
+watch=false
+module.testrunner=
+
+log.trace.output = off
+log.info.output  = off
+log.warn.output  = stderr
+log.error.output = stderr
